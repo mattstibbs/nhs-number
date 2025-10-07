@@ -108,6 +108,9 @@ vars(nhs_number)
 # {'nhs_number': '9876543210', 'identifier_digits': '987654321', 'check_digit': 0, 'valid': True, 'calculated_checksum': 0, 'region': <nhs_number.constants.Region object at 0x000001A0AD3CD490>, 'region_comment': 'Not to be issued (Synthetic/test patients PDS)'}
 ```
 
+!!! warning "Working with synethetic / unallocated numbers only"
+    Careless use of numbers generated from this library could result in data loss, damage or compromise. Under no circumstances should these be used in queries against live health service systems. If you want to avoid generating numbers which may have been allocated to real patients, apply the `for_region=REGION_SYNTHETIC` parameter to constrain the output of the function to only numbers from the 900000000n - 999999999n testing range.
+
 ## Regions
 
 You can obtain Region objects via the package's `REGION_*` constants. See [NHS Number Ranges](nhs-numbers.md#nhs-number-ranges) for details on ranges.
