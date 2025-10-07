@@ -108,7 +108,7 @@ vars(nhs_number)
 ```
 
 !!! warning "Working with synethetic / unallocated numbers only"
-    If you want to avoid generating numbers which may have been allocated to real patients, apply the `for_region=REGION_SYNTHETIC` parameter to constrain the output of the function to only numbers from the 900000000n - 999999999n testing range.
+    Careless use of numbers generated from this library could result in data loss, damage or compromise. Under no circumstances should these be used in queries against live health service systems. If you want to avoid generating numbers which may have been allocated to real patients, apply the `for_region=REGION_SYNTHETIC` parameter to constrain the output of the function to only numbers from the 900000000n - 999999999n testing range.
 
 ## Regions
 
